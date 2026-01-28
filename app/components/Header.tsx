@@ -16,12 +16,12 @@ export default function Header() {
     { href: '/courses', label: 'Courses' },
     { href: '/universities', label: 'Universities' },
     { href: '/admission', label: 'Admission' },
-    { href: '/contact', label: 'Contact' },
-    { href: '/faqs', label: 'FAQs' }
+    { href: '/careers', label: 'Careers' },
+    { href: '/contact', label: 'Contact' }
   ]
 
   return (
-    <header className="bg-white/95 backdrop-blur-md shadow-md sticky top-0 z-50 border-b border-gray-200">
+    <header className="bg-white shadow-md sticky top-0 z-50 border-b border-gray-200">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
@@ -56,12 +56,6 @@ export default function Header() {
                 {link.label}
               </Link>
             ))}
-            <Link
-              href="/admission"
-              className="ml-4 px-6 py-2 bg-gradient-to-r from-indigo-600 to-purple-600 text-white rounded-lg text-sm font-semibold hover:from-indigo-700 hover:to-purple-700 transition-all transform hover:scale-105 shadow-md"
-            >
-              Apply Now
-            </Link>
           </nav>
 
           {/* Mobile Menu Button */}
@@ -102,13 +96,6 @@ export default function Header() {
                 {link.label}
               </Link>
             ))}
-            <Link
-              href="/admission"
-              onClick={() => setIsMenuOpen(false)}
-              className="block mt-4 mx-4 px-6 py-3 bg-gradient-to-r from-indigo-600 to-purple-600 text-white rounded-lg text-base font-semibold text-center hover:from-indigo-700 hover:to-purple-700 transition-all"
-            >
-              Apply Now
-            </Link>
           </nav>
         )}
       </div>

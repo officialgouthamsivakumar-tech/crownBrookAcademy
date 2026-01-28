@@ -47,7 +47,7 @@ export default function ContactPage() {
   }
 
   return (
-    <div className="overflow-hidden">
+    <div className="overflow-hidden bg-white">
       {/* Top Introductory Banner */}
       <section className="bg-[#321e6c] py-12">
         <div className="container mx-auto px-4">
@@ -107,7 +107,7 @@ export default function ContactPage() {
                   value={formData.phone}
                   onChange={handleChange}
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#321e6c] focus:border-[#321e6c] text-[#333333]"
-                  placeholder="+1 (555) 123-4567"
+                  placeholder={INSTITUTION_PHONE}
                 />
               </div>
               <div>
@@ -207,10 +207,10 @@ export default function ContactPage() {
           </div>
         </div>
 
-        {/* Google Maps */}
+        {/* Find Us */}
         <div className="bg-white p-8 rounded-xl shadow-lg border border-gray-100">
           <h2 className="text-3xl font-bold text-[#321e6c] mb-6">Find Us</h2>
-          <div className="w-full h-96 rounded-lg overflow-hidden">
+          <div className="w-full h-96 rounded-lg overflow-hidden mb-4 border border-gray-200">
             <iframe
               width="100%"
               height="100%"
@@ -218,12 +218,24 @@ export default function ContactPage() {
               loading="lazy"
               allowFullScreen
               referrerPolicy="no-referrer-when-downgrade"
-              src={`https://www.google.com/maps/embed/v1/place?key=YOUR_GOOGLE_MAPS_API_KEY&q=${INSTITUTION_LOCATION.lat},${INSTITUTION_LOCATION.lng}`}
+              src={`https://www.google.com/maps?q=${encodeURIComponent(INSTITUTION_ADDRESS)}&output=embed`}
             />
           </div>
-          <p className="text-sm text-[#333333] mt-4">
-            Note: Replace YOUR_GOOGLE_MAPS_API_KEY with your actual Google Maps API key in the contact page component.
-          </p>
+          <div className="bg-gray-50 p-6 rounded-lg">
+            <h3 className="text-xl font-bold text-[#321e6c] mb-3">Our Location</h3>
+            <p className="text-[#333333] leading-relaxed mb-4">{INSTITUTION_ADDRESS}</p>
+            <a
+              href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(INSTITUTION_ADDRESS)}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center text-[#321e6c] hover:text-[#2a1a5a] font-semibold transition"
+            >
+              <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+              </svg>
+              Open in Google Maps
+            </a>
+          </div>
         </div>
       </div>
     </div>

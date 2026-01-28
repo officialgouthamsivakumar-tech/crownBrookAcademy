@@ -4,7 +4,7 @@ import { INSTITUTION_NAME } from '@/app/config/constants'
 
 export const metadata: Metadata = {
   title: `About Us - ${INSTITUTION_NAME}`,
-  description: 'Learn about Crownbrook Academy and our mission to empower students through quality education and expert guidance.',
+  description: 'Learn about Crownbook Academy and our mission to empower students through quality education and expert guidance.',
 }
 
 export default function AboutPage() {
@@ -187,26 +187,6 @@ export default function AboutPage() {
               <h3 className="text-xl font-bold mb-3 text-[#321e6c]">Career Counseling</h3>
               <p className="text-[#333333] leading-relaxed">
                 Professional career guidance to help you choose the right path for your future.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* International Qualifications Section */}
-      <section className="py-16 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-[#321e6c]">{INSTITUTION_NAME} and International Qualifications</h2>
-            <div className="text-lg text-[#333333] leading-relaxed space-y-4">
-              <p>
-                {INSTITUTION_NAME} maintains strategic alliances with accredited educational institutions spanning North America, Europe, Asia-Pacific, and beyond. These carefully selected partnerships enable our students to pursue qualifications that carry global recognition and respect from academic institutions, professional licensing bodies, and multinational employers.
-              </p>
-              <p>
-                Our role extends beyond simple placement services. We provide comprehensive academic preparation, application strategy development, and ongoing mentorship throughout the qualification process. All credentials are issued directly by our partner institutions, ensuring authenticity and international acceptance. Our preparation programs are designed to bridge any gaps between local educational systems and international requirements.
-              </p>
-              <p>
-                Through various bilateral and multilateral recognition frameworks, the qualifications obtained through {INSTITUTION_NAME} pathways maintain full validity and equivalence across national boundaries. This ensures that our graduates can seamlessly continue their education or begin their careers anywhere in the world, with credentials that are universally respected and valued.
               </p>
             </div>
           </div>

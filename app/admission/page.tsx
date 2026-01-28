@@ -1,5 +1,4 @@
 import type { Metadata } from 'next'
-import Link from 'next/link'
 import { INSTITUTION_NAME } from '@/app/config/constants'
 
 export const metadata: Metadata = {
@@ -92,7 +91,7 @@ const steps = [
 
 export default function AdmissionPage() {
   return (
-    <div className="overflow-hidden">
+    <div className="overflow-hidden bg-white">
       {/* Top Introductory Banner */}
       <section className="bg-[#321e6c] py-12">
         <div className="container mx-auto px-4">
@@ -108,115 +107,110 @@ export default function AdmissionPage() {
       {/* Process Steps */}
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            {steps.map((step, index) => (
-              <div key={step.number} className="mb-8">
-                <div className="flex items-start">
-                  <div className="flex-shrink-0">
-                    <div className="flex items-center justify-center w-16 h-16 bg-[#321e6c] text-white rounded-full text-xl font-bold">
-                      {step.number}
-                    </div>
-                  </div>
-                  <div className="ml-6 flex-1">
-                    <div className="flex items-center mb-2">
-                      <div className="text-[#321e6c] mr-3">
-                        {step.icon}
+          <div className="max-w-6xl mx-auto">
+            <div className="space-y-8">
+              {steps.map((step, index) => {
+                // Alternate border colors for visual variety
+                const borderColor = index % 2 === 0 ? 'border-[#321e6c]' : 'border-[#c1ac80]'
+                const gradientFrom = index % 2 === 0 ? 'from-[#321e6c]' : 'from-[#c1ac80]'
+                const gradientTo = index % 2 === 0 ? 'to-[#4a2d8a]' : 'to-[#d4b890]'
+                
+                return (
+                  <div key={step.number} className={`bg-white rounded-2xl p-8 md:p-10 shadow-lg border-l-4 ${borderColor}`}>
+                    <div className="flex items-start gap-6">
+                      <div className="flex-shrink-0">
+                        <div className={`w-16 h-16 bg-gradient-to-br ${gradientFrom} ${gradientTo} rounded-xl flex items-center justify-center text-white font-bold text-2xl`}>
+                          {step.number}
+                        </div>
                       </div>
-                      <h2 className="text-2xl font-bold text-[#321e6c]">{step.title}</h2>
+                      <div className="flex-1">
+                        <div className="flex items-center mb-4">
+                          <div className="text-[#321e6c] mr-3">
+                            {step.icon}
+                          </div>
+                          <h2 className="text-2xl md:text-3xl font-bold text-[#321e6c]">{step.title}</h2>
+                        </div>
+                        <p className="text-lg text-[#333333] leading-relaxed">{step.description}</p>
+                      </div>
                     </div>
-                    <p className="text-lg text-[#333333] leading-relaxed">{step.description}</p>
                   </div>
-                </div>
-                {index < steps.length - 1 && (
-                  <div className="ml-8 mt-4 mb-4">
-                    <div className="w-0.5 h-8 bg-[#321e6c]"></div>
-                  </div>
-                )}
-              </div>
-            ))}
+                )
+              })}
+            </div>
           </div>
         </div>
       </section>
 
       {/* Requirements Section */}
-      <section className="py-16 bg-white">
+      <section className="py-16 bg-gradient-to-br from-gray-50 to-white">
         <div className="container mx-auto px-4">
-          <h2 className="text-4xl md:text-5xl font-bold mb-12 text-[#321e6c]">General Requirements</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div>
-              <h3 className="text-xl font-bold mb-4 text-[#321e6c]">Academic Documents</h3>
-              <ul className="space-y-3">
-                <li className="flex items-start text-[#333333]">
-                  <svg className="w-5 h-5 text-[#321e6c] mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                  </svg>
-                  Academic transcripts
-                </li>
-                <li className="flex items-start text-[#333333]">
-                  <svg className="w-5 h-5 text-[#321e6c] mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                  </svg>
-                  Degree certificates
-                </li>
-                <li className="flex items-start text-[#333333]">
-                  <svg className="w-5 h-5 text-[#321e6c] mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                  </svg>
-                  Recommendation letters
-                </li>
-                <li className="flex items-start text-[#333333]">
-                  <svg className="w-5 h-5 text-[#321e6c] mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                  </svg>
-                  Statement of Purpose
-                </li>
-              </ul>
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-12">
+              <h2 className="text-4xl md:text-5xl font-bold mb-4 text-[#321e6c]">General Requirements</h2>
+              <p className="text-xl text-[#333333] max-w-3xl mx-auto">
+                Essential documents and test scores needed for your admission process
+              </p>
             </div>
-            <div>
-              <h3 className="text-xl font-bold mb-4 text-[#321e6c]">Test Scores</h3>
-              <ul className="space-y-3">
-                <li className="flex items-start text-[#333333]">
-                  <svg className="w-5 h-5 text-[#321e6c] mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                  </svg>
-                  IELTS/TOEFL (English proficiency)
-                </li>
-                <li className="flex items-start text-[#333333]">
-                  <svg className="w-5 h-5 text-[#321e6c] mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                  </svg>
-                  GRE/GMAT (if required)
-                </li>
-                <li className="flex items-start text-[#333333]">
-                  <svg className="w-5 h-5 text-[#321e6c] mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                  </svg>
-                  SAT/ACT (for undergraduate)
-                </li>
-                <li className="flex items-start text-[#333333]">
-                  <svg className="w-5 h-5 text-[#321e6c] mr-3 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                  </svg>
-                  Other standardized tests
-                </li>
-              </ul>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100">
+                <h3 className="text-2xl font-bold mb-6 text-[#321e6c]">Academic Documents</h3>
+                <ul className="space-y-4">
+                  <li className="flex items-start text-[#333333]">
+                    <svg className="w-6 h-6 text-[#c1ac80] mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                    <span className="text-lg">Academic transcripts</span>
+                  </li>
+                  <li className="flex items-start text-[#333333]">
+                    <svg className="w-6 h-6 text-[#c1ac80] mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                    <span className="text-lg">Degree certificates</span>
+                  </li>
+                  <li className="flex items-start text-[#333333]">
+                    <svg className="w-6 h-6 text-[#c1ac80] mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                    <span className="text-lg">Recommendation letters</span>
+                  </li>
+                  <li className="flex items-start text-[#333333]">
+                    <svg className="w-6 h-6 text-[#c1ac80] mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                    <span className="text-lg">Statement of Purpose</span>
+                  </li>
+                </ul>
+              </div>
+              <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100">
+                <h3 className="text-2xl font-bold mb-6 text-[#321e6c]">Test Scores</h3>
+                <ul className="space-y-4">
+                  <li className="flex items-start text-[#333333]">
+                    <svg className="w-6 h-6 text-[#c1ac80] mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                    <span className="text-lg">IELTS/TOEFL (English proficiency)</span>
+                  </li>
+                  <li className="flex items-start text-[#333333]">
+                    <svg className="w-6 h-6 text-[#c1ac80] mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                    <span className="text-lg">GRE/GMAT (if required)</span>
+                  </li>
+                  <li className="flex items-start text-[#333333]">
+                    <svg className="w-6 h-6 text-[#c1ac80] mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                    <span className="text-lg">SAT/ACT (for undergraduate)</span>
+                  </li>
+                  <li className="flex items-start text-[#333333]">
+                    <svg className="w-6 h-6 text-[#c1ac80] mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                    <span className="text-lg">Other standardized tests</span>
+                  </li>
+                </ul>
+              </div>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-16 bg-[#c1ac80]">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">Ready to Start Your Admission Journey?</h2>
-            <p className="text-xl text-white/90 mb-8 leading-relaxed">Get expert guidance from our experienced counselors today.</p>
-            <Link
-              href="/contact"
-              className="inline-block bg-white text-[#321e6c] px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-50 transition shadow-lg"
-            >
-              Schedule a Consultation
-            </Link>
           </div>
         </div>
       </section>

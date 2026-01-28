@@ -1,14 +1,14 @@
 import type { Metadata } from 'next'
-import { INSTITUTION_NAME } from '@/app/config/constants'
+import { INSTITUTION_NAME, INSTITUTION_PHONE } from '@/app/config/constants'
 
 export const metadata: Metadata = {
   title: `Terms & Conditions - ${INSTITUTION_NAME}`,
-  description: 'Terms and Conditions for Crownbrook Academy. Read our terms of service and usage policies.',
+  description: 'Terms and Conditions for Crownbook Academy. Read our terms of service and usage policies.',
 }
 
 export default function TermsPage() {
   return (
-    <div className="overflow-hidden">
+    <div className="overflow-hidden bg-white">
       {/* Top Introductory Banner */}
       <section className="bg-[#321e6c] py-12">
         <div className="container mx-auto px-4">
@@ -19,7 +19,7 @@ export default function TermsPage() {
         </div>
       </section>
 
-      <div className="container mx-auto px-4 py-16 max-w-4xl">
+      <div className="container mx-auto px-4 py-16 max-w-4xl bg-white">
         <div className="prose prose-lg max-w-none">
           <section className="mb-8">
             <h2 className="text-3xl font-bold text-[#321e6c] mb-4">1. Acceptance of Terms</h2>
@@ -128,7 +128,7 @@ export default function TermsPage() {
             <p className="text-[#333333]">
               <strong>{INSTITUTION_NAME}</strong><br />
               Email: info@crownbookacademy.com<br />
-              Phone: +1 (555) 123-4567
+              Phone: {INSTITUTION_PHONE}
             </p>
           </section>
         </div>
