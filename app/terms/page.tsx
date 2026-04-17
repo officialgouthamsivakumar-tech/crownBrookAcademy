@@ -3,7 +3,7 @@ import { INSTITUTION_NAME, INSTITUTION_PHONE } from '@/app/config/constants'
 
 export const metadata: Metadata = {
   title: `Terms & Conditions - ${INSTITUTION_NAME}`,
-  description: 'Terms and Conditions for Crownbook Academy. Read our terms of service and usage policies.',
+  description: 'Terms and Conditions for CrownBrook Academy. Read our terms of service and usage policies.',
 }
 
 export default function TermsPage() {
@@ -127,7 +127,7 @@ export default function TermsPage() {
             </p>
             <p className="text-[#333333]">
               <strong>{INSTITUTION_NAME}</strong><br />
-              Email: info@crownbookacademy.com<br />
+              Email: info@crownbrookacademyedu.com<br />
               Phone: {INSTITUTION_PHONE}
             </p>
           </section>

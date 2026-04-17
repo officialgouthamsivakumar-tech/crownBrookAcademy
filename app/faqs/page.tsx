@@ -5,7 +5,7 @@ import { INSTITUTION_NAME } from '@/app/config/constants'
 
 const faqs = [
   {
-    question: 'What services does Crownbrook Academy provide?',
+    question: 'What services does CrownBrook Academy provide?',
     answer: 'We provide comprehensive educational counseling services including university selection, application assistance, visa processing, test preparation guidance, and pre-departure support. We help students at every step of their journey to study abroad.'
   },
   {

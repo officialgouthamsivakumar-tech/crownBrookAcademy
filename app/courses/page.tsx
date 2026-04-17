@@ -13,7 +13,7 @@ const courses = [
     slug: 'international-diploma-quality-teaching-learning',
     title: 'International Diploma in Quality Teaching & Learning',
     subtitle: 'UK Level 6 & Level 7 Qualification',
-    description: 'Creating Outstanding Teachers for Top Schools Worldwide. Delivered by CrownBook Academy, this internationally aligned diploma is designed to transform passionate educators into globally competent, highly employable teachers.',
+    description: 'Creating Outstanding Teachers for Top Schools Worldwide. Delivered by CrownBrook Academy, this internationally aligned diploma is designed to transform passionate educators into globally competent, highly employable teachers.',
     icon: (
       <svg className="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
@@ -26,7 +26,7 @@ const courses = [
     slug: 'tefl-teaching-english-foreign-language',
     title: 'TEFL – Teaching English as a Foreign Language',
     subtitle: 'International Certification for Global English Teaching Careers',
-    description: 'Offered by CrownBook Academy, the TEFL program prepares aspiring and experienced educators to teach English confidently anywhere in the world—in schools, language centers, and online classrooms.',
+    description: 'Offered by CrownBrook Academy, the TEFL program prepares aspiring and experienced educators to teach English confidently anywhere in the world—in schools, language centers, and online classrooms.',
     icon: (
       <svg className="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129" />
@@ -65,7 +65,7 @@ const courses = [
     slug: 'uk-pathway-programs',
     title: 'UK Pathway Programs – Technology & Business Management',
     subtitle: 'Study Year 1 & Year 2 with Us. Graduate in the UK.',
-    description: 'Our UK pathway programs allow students to complete the first and second year in India at CrownBook Academy and transfer to the UK for the final year, earning a full UK degree.',
+    description: 'Our UK pathway programs allow students to complete the first and second year in India at CrownBrook Academy and transfer to the UK for the final year, earning a full UK degree.',
     icon: (
       <svg className="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />

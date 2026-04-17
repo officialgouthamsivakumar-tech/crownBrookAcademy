@@ -9,7 +9,7 @@ const courseDetails: Record<string, any> = {
     title: 'International Diploma in Quality Teaching & Learning',
     subtitle: 'UK Level 6 & Level 7 Qualification',
     tagline: 'Creating Outstanding Teachers for Top Schools Worldwide',
-    description: 'Delivered by CrownBook Academy, this internationally aligned diploma is designed to transform passionate educators into globally competent, highly employable teachers.',
+    description: 'Delivered by CrownBrook Academy, this internationally aligned diploma is designed to transform passionate educators into globally competent, highly employable teachers.',
     overview: {
       title: 'Course Overview',
       content: [
@@ -88,7 +88,7 @@ const courseDetails: Record<string, any> = {
     title: 'TEFL – Teaching English as a Foreign Language',
     subtitle: 'International Certification for Global English Teaching Careers',
     tagline: 'Teach English. Travel the World. Build a Global Career.',
-    description: 'Offered by CrownBook Academy, the TEFL program prepares aspiring and experienced educators to teach English confidently anywhere in the world—in schools, language centers, and online classrooms.',
+    description: 'Offered by CrownBrook Academy, the TEFL program prepares aspiring and experienced educators to teach English confidently anywhere in the world—in schools, language centers, and online classrooms.',
     overview: {
       title: 'Course Overview',
       content: [
@@ -210,7 +210,7 @@ const courseDetails: Record<string, any> = {
     title: 'UK Pathway Programs – Technology & Business Management',
     subtitle: 'Study Year 1 & Year 2 with Us. Graduate in the UK.',
     tagline: 'Earn a Full UK Degree with Significant Cost Savings',
-    description: 'Our UK pathway programs allow students to complete the first and second year in India at CrownBook Academy and transfer to the UK for the final year, earning a full UK degree.',
+    description: 'Our UK pathway programs allow students to complete the first and second year in India at CrownBrook Academy and transfer to the UK for the final year, earning a full UK degree.',
     pathways: [
       'Cyber Security',
       'Data Science',

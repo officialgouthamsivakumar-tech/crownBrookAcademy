@@ -3,7 +3,7 @@ import { INSTITUTION_NAME, INSTITUTION_PHONE } from '@/app/config/constants'
 
 export const metadata: Metadata = {
   title: `Privacy Policy - ${INSTITUTION_NAME}`,
-  description: 'Privacy Policy for Crownbook Academy. Learn how we collect, use, and protect your personal information.',
+  description: 'Privacy Policy for CrownBrook Academy. Learn how we collect, use, and protect your personal information.',
 }
 
 export default function PrivacyPolicyPage() {
@@ -139,7 +139,7 @@ export default function PrivacyPolicyPage() {
             </p>
             <p className="text-[#333333]">
               <strong>{INSTITUTION_NAME}</strong><br />
-              Email: info@crownbookacademy.com<br />
+              Email: info@crownbrookacademyedu.com<br />
               Phone: {INSTITUTION_PHONE}
             </p>
           </section>

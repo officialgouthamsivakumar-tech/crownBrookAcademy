@@ -4,7 +4,7 @@ import { INSTITUTION_NAME } from '@/app/config/constants'
 
 export const metadata: Metadata = {
   title: `Careers & Placement - ${INSTITUTION_NAME}`,
-  description: 'Explore career opportunities and placement services at Crownbook Academy. We help students secure placements and build successful careers.',
+  description: 'Explore career opportunities and placement services at CrownBrook Academy. We help students secure placements and build successful careers.',
 }
 
 export default function CareersPage() {

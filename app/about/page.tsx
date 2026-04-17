@@ -4,7 +4,7 @@ import { INSTITUTION_NAME } from '@/app/config/constants'
 
 export const metadata: Metadata = {
   title: `About Us - ${INSTITUTION_NAME}`,
-  description: 'Learn about Crownbook Academy and our mission to empower students through quality education and expert guidance.',
+  description: 'Learn about CrownBrook Academy and our mission to empower students through quality education and expert guidance.',
 }
 
 export default function AboutPage() {
